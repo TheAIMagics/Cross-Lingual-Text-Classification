@@ -2,4 +2,5 @@ pytorch_lightning
 tensorflow_hub
 tensorflow_text
 datasets
+scikit-learn
 -e .
