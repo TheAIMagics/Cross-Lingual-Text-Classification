@@ -1,0 +1,68 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="../static/result.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+{% endblock %}
+
+
+{% block body %}
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <div id="invoice">
+
+                <div class="invoice overflow-auto">
+                    <div style="min-width: 600px">
+
+                        <main>
+
+                            <table>
+                                <thead>
+                                    <tr>
+
+                                        <th class="text-left">TEXT</th>
+                                        <th class="text-right">LABEL</th>
+                                        <th class="text-right">SCORE</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for result in results %}
+                                    <tr>
+                                        <td class="text-left">
+                                            <h3>
+                                                <a target="_blank" href="javascript:;">
+                                                    {{ result.text }}
+                                                </a>
+                                            </h3>
+
+                                        <td class="unit">
+                                            {% if result.label == 'positive' %}
+                                            <div class="icon" style="color: darkgreen;">{{result.label}}<span
+                                                    class="fa fa-plus-circle"></span></div>
+                                            {% else %}
+                                            <div class="icon" style="color: darkred;">{{result.label}}<span
+                                                    class="fa fa-minus-circle"></span></div>
+                                            {% endif %}
+                                        </td>
+                                        <td class="total">{{ result.score }}</td>
+
+                                    </tr>
+                                    {% endfor %}
+
+                                </tbody>
+
+                            </table>
+
+                        </main>
+
+                    </div>
+                    <!--DO NOT DELETE THIS div. IT is responsible for showing footer always at the bottom-->
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

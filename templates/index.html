@@ -1,0 +1,90 @@
+
+{% extends 'layout.html' %} 
+
+{% block head %}
+<link rel="stylesheet" href="../static/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+
+<div class="wrapper">
+  <div class="title">
+    Choose your favorite sites from below options
+  </div>
+  <form name="upload" id="file_upload" method="post" action="/index" >
+  <div class="container">
+    <label class="option_item">
+      <input type="checkbox" name="english" class="checkbox">
+      <div class="option_inner facebook">
+        <div class="tickmark"></div>
+        <div class="icon"><i class="fa fa-american-sign-language-interpreting"></i></div>
+        <div class="name">English</div>
+      </div>
+    </label>
+    <label class="option_item">
+      <input type="checkbox" name='german' class="checkbox">
+      <div class="option_inner twitter">
+        <div class="tickmark"></div>
+        <div class="icon"><i class="fa fa-globe"></i></div>
+        <div class="name">German</div>
+      </div>
+    </label>
+    <label class="option_item">
+      <input type="checkbox" name='chinese' class="checkbox">
+      <div class="option_inner instagram">
+        <div class="tickmark"></div>
+        <div class="icon"><i class="fa fa-barcode"></i></div>
+        <div class="name">Chinese</div>
+      </div>
+    </label>
+    <label class="option_item">
+      <input type="checkbox" class="checkbox" name="italian">
+      <div class="option_inner linkedin">
+        <div class="tickmark"></div>
+        <div class="icon"><i class="fa fa-braille"></i></div>
+        <div class="name">Italian</div>
+      </div>
+    </label>
+    <label class="option_item">
+      <input type="checkbox" class="checkbox" name="japanese">
+      <div class="option_inner whatsapp">
+        <div class="tickmark"></div>
+        <div class="icon"><i class="fa fa-circle"></i></div>
+        <div class="name">Japanese</div>
+      </div>
+    </label>
+    <label class="option_item">
+      <input type="checkbox" class="checkbox" name="french">
+      <div class="option_inner google">
+        <div class="tickmark"></div>
+        <div class="icon"><i class="fa fa-flag-checkered"></i></div>
+        <div class="name">French</div>
+      </div>
+    </label>
+    <label class="option_item">
+      <input type="checkbox" class="checkbox" name = 'korean' >
+      <div class="option_inner reddit">
+        <div class="tickmark"></div>
+        <div class="icon"><i class="fa fa-bolt"></i></div>
+        <div class="name">Korean</div>
+      </div>
+    </label>
+    <label class="option_item">
+      <input type="checkbox" class="checkbox" name="russian">
+      <div class="option_inner quora">
+        <div class="tickmark"></div>
+        <div class="icon"><i class="fa fa-life-ring"></i></div>
+        <div class="name">Russian</div>
+      </div>
+    </label>
+  </div>
+  <input type="submit" value="Submit!" class="btn btn-primary" id="submitbtn">
+</form>
+
+</div>
+	
+
+
+{% endblock %}

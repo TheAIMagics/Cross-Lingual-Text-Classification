@@ -3,4 +3,6 @@ tensorflow_hub
 tensorflow_text
 datasets
 scikit-learn
+PrettyPrinter
+Flask
 -e .
