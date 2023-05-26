@@ -167,3 +167,32 @@ body {
 .option_item .option_inner.quora .tickmark {
   border-color: #b92b27 transparent transparent #b92b27;
 }
+.inputBox {
+  position: relative;
+}
+.inputBox #btn {
+  position: relative;
+  outline: none;
+  font-size: 1.25em;
+  background: #8f2c24;
+  border: none;
+  color: #fff;
+  font-size: 1.25em;
+  font-weight: 500;
+  transition: 0.5s;
+  cursor: pointer;
+  width: 100%;
+  padding: 15px 20px;
+  display: grid;
+  place-content: center;
+}
+
+.loader {
+  pointer-events: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #fff;
+  animation: animate 1s ease infinite;
+}

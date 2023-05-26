@@ -1,6 +1,6 @@
 import sys
 from src.exception import CustomException
-from src.pipeline.prediction_pipeline import SinglePrediction
+# from src.pipeline.prediction_pipeline import SinglePrediction
 from flask import Flask, render_template,request
 
 import traceback
@@ -45,10 +45,11 @@ def result():
     try:
         if request.method == 'POST':
             input_text = request.form.getlist('language')
-            obj = SinglePrediction()
-            result = obj.predict(input_text)
-            print(result)
-            return render_template("result.html", results = result)
+            # obj = SinglePrediction()
+            # result = obj.predict(input_text)
+            # print(result)
+            # return render_template("result.html", results = result)
+            return render_template("result.html")
     except Exception as e:
         traceback.print_exc() 
         raise CustomException(e,sys)

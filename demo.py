@@ -4,11 +4,8 @@ from pprint import PrettyPrinter
 
 pp = PrettyPrinter()
 
-# obj = TrainPipeline()
-# obj.run_pipeline()
 
 obj = SinglePrediction()
-
 
 
 english_text = "Yes! Awesome soy cap, scone, and atmosphere. Nice place to hang out & read, and free WiFi with no login procedure."
