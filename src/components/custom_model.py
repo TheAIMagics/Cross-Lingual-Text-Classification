@@ -15,6 +15,32 @@ from src.exception import CustomException
 from src.logger import logging
 
 class YelpModel(pl.LightningModule):
+  """
+    PyTorch Lightning module for a Yelp Model.
+
+    Args:
+        hidden_dims (List[int]): List of dimensions for hidden layers (default: [768, 128]).
+        dropout_prob (float): Dropout probability (default: 0.5).
+        learning_rate (float): Learning rate for the optimizer (default: 1e-3).
+
+    Attributes:
+        train_acc: Metric for tracking training accuracy.
+        val_acc: Metric for tracking validation accuracy.
+        test_acc: Metric for tracking test accuracy.
+        hidden_dims (List[int]): List of dimensions for hidden layers.
+        dropout_prob (float): Dropout probability.
+        learning_rate (float): Learning rate for the optimizer.
+        embedding_dim (int): Dimension of the input embeddings.
+        layers (nn.Sequential): Sequential layers of the model.
+
+    Methods:
+        forward(x): Forward pass of the model.
+        configure_optimizers(): Configure the optimizer for training.
+        __compute_loss(batch): Compute the loss, predictions, and labels for a given batch.
+        training_step(batch, batch_idx): Training step for a batch of data.
+        validation_step(batch, batch_idx): Validation step for a batch of data.
+        test_step(batch, batch_idx): Test step for a batch of data.
+    """
   def __init__(self,
                hidden_dims : List[int] = [768,128],
                dropout_prob : float = 0.5,

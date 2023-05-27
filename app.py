@@ -7,11 +7,24 @@ from flask import Flask, render_template,request
 app = Flask(__name__)
 
 @app.route('/',methods= ['GET'])
+    
 def land():
+    """
+    This function defines a route for the root URL and returns the rendered template for the index.html
+    file.
+    :return: The function `land()` returns the rendered template of the `index.html` file.
+    """
     return render_template("index.html")
 
 @app.route('/index',methods= ['GET','POST'])
 def index():
+    """
+    This function receives a POST request with language options, creates a dictionary of selected
+    languages, and renders a template with the selected languages.
+    :return: a rendered template "reviews.html" with a dictionary "data" as a parameter. The "data"
+    dictionary is created by iterating through a "language_list" dictionary and adding the keys that
+    have a value of 'on' to the "data" dictionary.
+    """
     try:
         if request.method == 'POST':
             english = request.form.get('english')
@@ -41,6 +54,12 @@ def index():
 
 @app.route('/result',methods= ['GET','POST'])
 def result():
+    """
+    This function takes input from a form, uses it to make a prediction, and returns the result to be
+    displayed on a webpage.
+    :return: a rendered HTML template with the results of a prediction made by an object of the class
+    SinglePrediction. The results are passed as a parameter to the template with the name "results".
+    """
     try:
         if request.method == 'POST':
             input_text = request.form.getlist('language')

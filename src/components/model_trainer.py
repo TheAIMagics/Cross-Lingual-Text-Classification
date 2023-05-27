@@ -9,15 +9,34 @@ import pytorch_lightning as pl
 
 S3_BUCKET_DATA_URI = 's3://multilingual-text/'
 
+# The ModelTrainer class trains a sentiment analysis model using PyTorch Lightning and saves the best
+# checkpoint to an S3 bucket.
 class ModelTrainer:
+    """
+    Class for training and saving the model.
 
+    Attributes:
+        s3_sync: S3Sync object for syncing files to S3.
+
+    Methods:
+        __init__(): Initialize the ModelTrainer object.
+        initiate_model_training(): Initiate the model training process.
+    """
     def __init__(self):
-            try:
-                self.s3_sync = S3Sync()
-            except Exception as e:
-                raise CustomException(e, sys)
+        """
+        This function initializes an object and tries to create an instance of the S3Sync class, raising
+        a CustomException if there is an error.
+        """
+        try:
+            self.s3_sync = S3Sync()
+        except Exception as e:
+            raise CustomException(e, sys)
 
     def initiate_model_training(self):
+        """
+        This function initiates the training of a sentiment analysis model using PyTorch Lightning and
+        saves the best checkpoint to an S3 bucket.
+        """
         try:
             data_loader = SentimentDataloader()
             data_loader.prepare_data()
