@@ -30,17 +30,13 @@
   ## 📖  Getting Started
   To install PyTorch, see installation instructions on the [PyTorch website](https://pytorch.org/get-started/locally).
 
-To install torchtext:
+To install requirements:
 
 ``` bash
-pip install torchtext
+pip install -r requirements.txt
 ```
- we'll use the transformers library, which can be installed via:
+ 
 
-```bash
-pip install transformers
-```
-----
 
 ## ⚙️ Tech Stack Used
 1. Python 
