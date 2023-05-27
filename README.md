@@ -15,7 +15,7 @@
 </p>
 
   <p align='center'>
-   <img src="./static/images/Video.gif" alt="mftool-java" width=850px>
+   <img src="./static/github.gif" alt="mftool-java" width=850px>
   </p>
   
   --- 
@@ -102,3 +102,21 @@ python app.py
 http://localhost:8080/
 
 ```
+**Artifact** : Stores all artifacts created from running the application
+
+**Components** : Contains all components of Machine Learning Project
+- DataIngestion
+- ModelTrainer
+
+
+**Custom Logger and Exceptions** are used in the project for better debugging purposes.
+
+
+## Take Aways
+
+You now have a better understanding of 
+-  Usage of hugging face transformers library.
+-  Dockerize application.
+-  Basic understanding Webframework like Flask.
+
+=====================================================================
